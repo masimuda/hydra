@@ -42852,7 +42852,7 @@ const i18nextBrowserLanguageDetector = require('i18next-browser-languagedetector
 const languageResources = require('./text-elements.js')
 
 const availableLanguages = ['ja', 'es', 'ar', 'id', 'pt-br', 'ch', 'ko', 'fr'] // localizations available in repository at /hydra-synth/l10n
-const languagePath = (lang) => `https://raw.githubusercontent.com/hydra-synth/l10n/main/${lang}/editor.json`
+const languagePath = (lang) => `./l10n/main/${lang}/editor.json`
 
 i18next
   // .use(i18nextHttpBackend)
@@ -42913,7 +42913,7 @@ module.exports = function store(state, emitter) {
       selectedLanguage: i18next.language
     }
   }
-  // loadLanguageFromURL('es', 'https://raw.githubusercontent.com/hydra-synth/l10n/main/es/editor.json')
+  // loadLanguageFromURL('es', './l10n/main/es/editor.json')
   //loadLanguageFromURL('es','https://hackmd.io/baEnGh7gRt2iHTvt-TT8Fw/download')
   function loadLanguageFromURL(lang = 'es', path) {
     const css = "color: purple; background: orange; font-size: 14px;padding:10px"
